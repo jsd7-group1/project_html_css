@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>potioncafe</title>
+    <!-- TailwindCSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- For Navigation Bar Hamburgur-->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </head>
+
+  <body class="font-sans /*bg-gradient-to-t from-[#fbc2eb] to-[#7f6c5e] h-screen*/">
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--HERO SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <header>
+      <!-- Hero Background -->
+      <section
+        class="flex flex-col min-h-screen bg-slate-800 bg-center bg-cover  bg-fixed bg-black/30"
+        style="background-image: url('./assets/images/hero/herobackground.png')"
+      >
+        <!--////////////////////////////////-->
+        <!--NAVIGATION BAR-->
+        <!--////////////////////////////////-->
+
+        <section class="bg-transparent">
+          <div
+            class="font-[Roboto] flex justify-between items-center w-[92%] h-16 mx-auto bg-transparent"
+          >
+            <div class="flex items-center">
+              <!--LOGO-->
+              <a href="./index.html">
+                <img
+                  class="w-6"
+                  src="../assets/images/navbar-icons/logo.svg"
+                  alt="logo"
+              /></a>
+              <p class="font-sans font-bold text-3xl text-black select-none">potioncafe</p>
+            </div>
+
+            <!--HAMBURGER LIST-->
+            <div
+              class="nav-links duration-500 absolute bg-white md:min-h-fit left-0 md:left-auto md:right-0 top-[-100%] md:w-auto w-full flex md:justify-end items-center px-5"
+            >
+              <ul class="flex flex-col md:items-center md:gap-[4vw] gap-8 font-sans">
+                <li>
+                  <a class="hover:text-gray-500" href="#">Home</a>
+                </li>
+                <li>
+                  <a class="hover:text-gray-500" href="#">Menu</a>
+                </li>
+                <li>
+                  <a class="hover:text-gray-500" href="#">Login</a>
+                </li>
+                <li>
+                  <a class="hover:text-gray-500" href="#"
+                    >Don't have an account?/Sign up</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex items-center gap-6">
+              <!--SEARCH TAB-->
+              <!-- component -->
+              <div>
+                <div class="flex px-8 group">
+                  <div
+                    class="ease-in-out duration-1000 group-hover:w-full group-focus-within:w-full group-focus-within:bg-slate-200 bg-opacity-80 flex items-center justify-between w-0 rounded-full shadow-xl p-1.5 sticky"
+                  >
+                    <!-- close icon -->
+                    <button
+                      class="invisible group-hover:visible group-focus-within:visible ease-linear duration-500 opacity-40 group-hover:opacity-100 group-focus-within:opacity-100"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ionicon w-9 h-9"
+                        viewBox="0 0 512 512"
+                      >
+                        <title>Close Circle</title>
+                        <path
+                          d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z"
+                        />
+                      </svg>
+                    </button>
+
+                    <!-- text input -->
+                    <input
+                      class="font-sans opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 invisible group-hover:visible group-focus-within:visible ease-in-out duration-700 rounded-full w-full h-9 py-4 pl-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline lg:text-sm text-xs"
+                      type="text"
+                      placeholder="Search the menu"
+                    />
+
+                    <!-- search icon -->
+                    <button
+                      class="-ml-11 group-hover:ml-auto group-focus-within:ml-auto"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ionicon h-9 w-9"
+                        viewBox="0 0 512 512"
+                      >
+                        <title>Search Circle</title>
+                        <path
+                          d="M256 64C150.13 64 64 150.13 64 256s86.13 192 192 192 192-86.13 192-192S361.87 64 256 64zm91.31 283.31a16 16 0 01-22.62 0l-42.84-42.83a88.08 88.08 0 1122.63-22.63l42.83 42.84a16 16 0 010 22.62z"
+                        />
+                        <circle cx="232" cy="232" r="56" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--CART ICON-->
+              <a href="#">
+                <img
+                  src="../assets/images/navbar-icons/cart.png"
+                  alt=""
+                  class="nav_cart cursor-pointer h-7"
+                />
+              </a>
+              <!--HAMBURGER ICON-->
+              <div class="flex items-center gap-6">
+                <ion-icon
+                  onclick="onToggleMenu(this)"
+                  name="menu"
+                  class="text-3xl cursor-pointer"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- For Navigation Bar Hamburgur-->
+        <script>
+          const navLinks = document.querySelector(".nav-links");
+          function onToggleMenu(e) {
+            e.name = e.name === "menu" ? "close" : "menu";
+            navLinks.classList.toggle("top-[9%]");
+          }
+        </script>
+        <!--////////////////////////////////-->
+        <!--END THE NAVIGATION BAR-->
+        <!--////////////////////////////////-->
+
+        <!--*******************************-->
+        <!--SLOGAN SECTION-->
+        <!--*******************************-->
+ <!-- Slogan Section Content -->
+ <div class="flex-1 flex justify-start mt-20">
+  <div class="text-center mx-auto">
+    <h1 class="text-7xl font-semibold text-[#655050] select-none">Exquisite Brews</h1>
+    <p class="text-7xl font-semibold mt-1 text-[#808080] select-none">Expertly Crafted</p>
+    <a class="px-5 py-2 inline-block bg-[#f4f4f4] bg-opacity-50 border border-[#000000] text-[#655050] text-block hover:bg-[#f4f4f4] transition-colors my-10 rounded-full hover:drop-shadow-md duration-300 ease-in-out" href="#">Our Menu ➜</a>
+ </div>
+</div>
+</section>
+        <!--*******************************-->
+        <!--END THE SLOGAN SECTION-->
+        <!--*******************************-->
+      </section>
+    </header>
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--END THE HERO SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+    <!--/////////////////////////////////-->
+    <!--Product HIGHTLIGHTS Desktop SECTION-->
+    <!--/////////////////////////////////-->
+    <section></section>
+    <!--/////////////////////////////////-->
+    <!--End the Product HIGHTLIGHTS Desktop SECTION-->
+    <!--/////////////////////////////////-->
+
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--Product HIGHTLIGHTS Mobile SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <section></section>
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--End the Product HIGHTLIGHTS Mobile SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+
+    <!--*******************************-->
+    <!--RECOMMENDATION SECTION-->
+    <!--*******************************-->
+    <section></section>
+    <!--*******************************-->
+    <!--END THE RECOMMENDATION SECTION-->
+    <!--*******************************-->
+
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--FOOTER SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->  
+    <footer class="bg-[#716464] py-6 md:flex">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center justify-between">
+          <div class="w-full md:w-1/2 mb-4 md:mb-0 text-white">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+          </div>
+          <div class="w-full md:w-1/2 text-white text-right">
+            <a href="#" class="inline-block mr-4 w-[22px]">
+              <img src="./assets/images/footer-icons/reel.png" alt="reel">
+            </a>
+            <a href="#" class="inline-block mr-4 w-[22px]">
+              <img src="./assets/images/footer-icons/ig.png" alt="ig">
+            </a>
+            <a href="#" class="inline-block mr-4 w-[22px]">
+              <img src="./assets/images/footer-icons/chat.png" alt="chat">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--END THE FOOTER SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\--> 
+  </body>
+  </html>
+  
