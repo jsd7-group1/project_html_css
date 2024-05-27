@@ -1,13 +1,406 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="font-sans">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>footer</title>
-    <!-- Tailwind CSS -->
+    <title>potioncafe</title>
+    <!-- TailwindCSS-->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- For Navigation Bar Hamburgur-->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
-  <body>
+
+  <body class="font-sans /*bg-gradient-to-t from-[#fbc2eb] to-[#7f6c5e] h-screen*/">
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--HERO SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <header>
+      <!-- Hero Background -->
+      <section
+        class="flex flex-col min-h-screen bg-slate-800 bg-center bg-cover  bg-fixed bg-black/30"
+        style="background-image: url('./assets/images/hero/herobackground.png')"
+      >
+        <!--////////////////////////////////-->
+        <!--NAVIGATION BAR-->
+        <!--////////////////////////////////-->
+
+        <section class="bg-transparent">
+          <div
+            class="font-[Roboto] flex justify-between items-center w-[92%] h-16 mx-auto bg-transparent"
+          >
+            <div class="flex items-center">
+              <!--LOGO-->
+              <a href="./index.html">
+                <img
+                  class="w-6"
+                  src="./assets/images/navbar-icons/logo.png"
+                  alt="logo"
+              /></a>
+              <p class="font-sans font-bold text-3xl text-black select-none">potioncafe</p>
+            </div>
+
+            <!--HAMBURGER LIST-->
+            <div
+              class="nav-links z-10 duration-500 absolute bg-[#f4f4f4] bg-opacity-80 md:bg-opacity-80 hover:bg-opacity-100  md:m-2 md:left-auto md:right-2 top-[-100%] left-3 right-3 w-fuil flex justify-center md:justify-end items-center p-8 rounded-xl drop-shadow-md"
+            >
+              <ul class="select-none flex flex-col md:justify-evenly items-center md:gap-[2vw] gap-3 text-slate-600 font-light font-sans p-2">
+                <li>
+                  <a class="hover:text-gray-500 " href="#">Home</a>
+                </li>
+                <li>
+                  <a class="hover:text-gray-500" href="#">Menu</a>
+                </li>
+                <li>
+                  <a class="hover:text-gray-500" href="#">Login</a>
+                </li>
+                <li>
+                  <a class="hover:text-gray-500" href="#"
+                    >Don't have an account?/Sign up</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="flex items-center gap-6">
+              <!--SEARCH TAB-->
+              <!-- component -->
+              <div>
+                <div class="flex px-8 group">
+                  <div
+                    class="ease-in-out duration-1000 group-hover:w-full group-focus-within:w-full group-focus-within:bg-slate-200 bg-opacity-80 flex items-center justify-between w-0 rounded-full shadow-xl p-1.5 sticky"
+                  >
+                    <!-- close icon -->
+                    <button
+                      class="invisible group-hover:visible group-focus-within:visible ease-linear duration-500 opacity-40 group-hover:opacity-100 group-focus-within:opacity-100"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ionicon w-9 h-9"
+                        viewBox="0 0 512 512"
+                      >
+                        <title>Close Circle</title>
+                        <path
+                          d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z"
+                        />
+                      </svg>
+                    </button>
+
+                    <!-- text input -->
+                    <input
+                      class="font-sans opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 invisible group-hover:visible group-focus-within:visible ease-in-out duration-700 rounded-full w-full h-9 py-4 pl-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline lg:text-sm text-xs"
+                      type="text"
+                      placeholder="Search the menu"
+                    />
+
+                    <!-- search icon -->
+                    <button
+                      class="-ml-11 group-hover:ml-auto group-focus-within:ml-auto"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="ionicon h-9 w-9"
+                        viewBox="0 0 512 512"
+                      >
+                        <title>Search Circle</title>
+                        <path
+                          d="M256 64C150.13 64 64 150.13 64 256s86.13 192 192 192 192-86.13 192-192S361.87 64 256 64zm91.31 283.31a16 16 0 01-22.62 0l-42.84-42.83a88.08 88.08 0 1122.63-22.63l42.83 42.84a16 16 0 010 22.62z"
+                        />
+                        <circle cx="232" cy="232" r="56" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!--CART ICON-->
+              <a href="#">
+                <img
+                  src="../assets/images/navbar-icons/cart.png"
+                  alt=""
+                  class="nav_cart cursor-pointer h-7"
+                />
+              </a>
+              <!--HAMBURGER ICON-->
+              <div class="flex items-center gap-6">
+                <ion-icon
+                  onclick="onToggleMenu(this)"
+                  name="menu"
+                  class="text-3xl cursor-pointer"
+                ></ion-icon>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- For Navigation Bar Hamburgur-->
+        <script>
+          const navLinks = document.querySelector(".nav-links");
+          function onToggleMenu(e) {
+            e.name = e.name === "menu" ? "close" : "menu";
+            navLinks.classList.toggle("top-[11%]");
+          }
+        </script>
+        <!--////////////////////////////////-->
+        <!--END THE NAVIGATION BAR-->
+        <!--////////////////////////////////-->
+
+        <!--*******************************-->
+        <!--SLOGAN SECTION-->
+        <!--*******************************-->
+ <!-- Slogan Section Content -->
+ <div class="flex-1 flex justify-start mt-20">
+  <div class="text-center mx-auto">
+    <h1 class="text-7xl font-semibold text-[#655050] select-none">Exquisite Brews</h1>
+    <p class="text-7xl font-semibold mt-1 text-[#808080] select-none">Expertly Crafted</p>
+    <a class="px-5 py-2 inline-block bg-[#f4f4f4] bg-opacity-50 border border-[#000000] text-[#655050] text-block hover:bg-[#f4f4f4] transition-colors my-10 rounded-full hover:drop-shadow-md duration-300 ease-in-out" href="#Recommendation">Our Signature ↓</a>
+ </div>
+</div>
+</section>
+        <!--*******************************-->
+        <!--END THE SLOGAN SECTION-->
+        <!--*******************************-->
+      </section>
+    </header>
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--END THE HERO SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+    <!--/////////////////////////////////-->
+    <!--Product HIGHTLIGHTS Desktop SECTION-->
+    <!--/////////////////////////////////-->
+    <section class="hidden md:block section p-10">
+      <div class="flex justify-between">
+          <div class="flex gap-4">
+              <div class=" text-center p-4 border border-black transition duration-300 ease-in-out cursor-pointer hover:bg-[#655050] hover:text-white">
+                  <p>All Drinks</p>
+              </div>
+              <div class=" text-center p-4 border border-black transition duration-300 ease-in-out cursor-pointer hover:bg-[#655050] hover:text-white">
+                  <p>Hot Drinks</p>
+              </div>
+              <div class=" text-center p-4 border border-black transition duration-300 ease-in-out cursor-pointer hover:bg-[#655050] hover:text-white">
+                  <p>Cold Drinks</p>
+              </div>
+              <div class=" text-center p-4 border border-black transition duration-300 ease-in-out cursor-pointer hover:bg-[#655050] hover:text-white">
+                  <p>Add-Ons</p>
+              </div>
+          </div>
+          <div>
+            <div id="dropdown-button" onclick="toggleDropdown()" class="select-none border border-gray-400 rounded px-5 py-2 cursor-pointer flex justify-between">
+              Sort By
+            </div>
+            <div id="dropdown-menu" class="z-10 hidden absolute top-50 w-400 border border-gray-300 bg-white shadow-md mt-2">
+              <div id="dropdown-popular" class="py-4 px-4 cursor-pointer hover:bg-gray-100">Popular</div>
+              <div id="dropdown-price" class="py-4 px-4 cursor-pointer hover:bg-gray-100">Price</div>
+              <div id="dropdown-newest" class="py-4 px-4 cursor-pointer hover:bg-gray-100">Newest</div>
+            </div>
+          </div>
+      </div>
+ <!-- Swiper -->
+ <div class="grid grid-cols-4 gap-4 pt-12">
+  <div class="">
+      <div class="card_top relative">
+          <img src="./assets/images/hero/Coffee.png" alt="" class="card_img" />
+          <div class="card_tag absolute top-1 left-1 z-10 bg-primary text-black px-2 py-1 font-semibold rounded">
+              Hot
+          </div>
+      </div>
+      <div class="card_body mt-4">
+          <h3 class="card_title text-lg font-semibold">Menu1</h3>
+          <p class="card_price text-primary">$120</p>
+          <div class="card_ratings flex items-center">
+              <div class="card_stars flex space-x-1">
+                              <a href="#">
+                <img
+                  src="../assets/images/navbar-icons/cart.png"
+                  alt=""
+                  class="nav_cart cursor-pointer h-7"
+                />
+              </a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="">
+    <div class="card_top relative">
+        <img src="./assets/images/hero/Coffee.png" alt="" class="card_img" />
+        <div class="card_tag absolute top-1 left-1 z-10 bg-primary text-black px-2 py-1 font-semibold rounded">
+            Hot
+        </div>
+    </div>
+    <div class="card_body mt-4">
+        <h3 class="card_title text-lg font-semibold">Menu2</h3>
+        <p class="card_price text-primary">$120</p>
+        <div class="card_ratings flex items-center">
+          <div class="card_stars flex space-x-1">
+                          <a href="#">
+                <img
+                  src="../assets/images/navbar-icons/cart.png"
+                  alt=""
+                  class="nav_cart cursor-pointer h-7"
+                />
+              </a>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="card_top relative">
+        <img src="./assets/images/hero/Coffee.png" alt="" class="card_img" />
+        <div class="card_tag absolute top-1 left-1 z-10 bg-primary text-black px-2 py-1 font-semibold rounded">
+            Hot
+        </div>
+    </div>
+    <div class="card_body mt-4">
+        <h3 class="card_title text-lg font-semibold">Menu3</h3>
+        <p class="card_price text-primary">$120</p>
+        <div class="card_ratings flex items-center">
+          <div class="card_stars flex space-x-1">
+                          <a href="#">
+                <img
+                  src="../assets/images/navbar-icons/cart.png"
+                  alt=""
+                  class="nav_cart cursor-pointer h-7"
+                />
+              </a>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="card_top relative">
+        <img src="./assets/images/hero/Coffee.png" alt="" class="card_img" />
+        <div class="card_tag absolute top-1 left-1 z-10 bg-primary text-black px-2 py-1 font-semibold rounded">
+            Hot
+        </div>
+    </div>
+    <div class="card_body mt-4">
+        <h3 class="card_title text-lg font-semibold">Menu4</h3>
+        <p class="card_price text-primary">$120</p>
+        <div class="card_ratings flex items-center">
+          <div class="card_stars flex space-x-1">
+                          <a href="#">
+                <img
+                  src="../assets/images/navbar-icons/cart.png"
+                  alt=""
+                  class="nav_cart cursor-pointer h-7"
+                />
+              </a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+      <script>
+          function toggleDropdown() {
+                    const dropdown = document.querySelector('#dropdown-menu');
+                    dropdown.classList.toggle('hidden');
+                  }
+      </script>
+  </section>
+    <!--/////////////////////////////////-->
+    <!--End the Product HIGHTLIGHTS Desktop SECTION-->
+    <!--/////////////////////////////////-->
+
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--Product HIGHTLIGHTS Mobile SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <section class="md:hidden flex flex-col items-center pt-4">
+      <h1 class="text-center font-semibold text-xl pt-7 text-[#655050]">OUR DRINKS</h1>
+      <h2 class="text-center font-semibold text-2xl">Check Out Some Of Them</h2>
+      <div class="pt-6">
+        <div class="card_top relative">
+            <img src="./assets/images/hero/Coffee.png" alt="" class="card_img" />
+            <div class="card_tag absolute top-1 left-1 z-10 bg-primary text-black px-2 py-1 font-semibold rounded">
+                Hot
+            </div>
+        </div>
+        <div class="card_body mt-4">
+            <h3 class="card_title text-lg font-semibold">Menu1</h3>
+            <p class="card_price text-primary">$120</p>
+            <div class="card_ratings flex items-center">
+              <div class="card_stars flex space-x-1">
+                              <a href="#">
+                <img
+                  src="../assets/images/navbar-icons/cart.png"
+                  alt=""
+                  class="nav_cart cursor-pointer h-7"
+                />
+              </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="pt-6">
+        <div class="card_top relative">
+            <img src="./assets/images/hero/Coffee.png" alt="" class="card_img" />
+            <div class="card_tag absolute top-1 left-1 z-10 bg-primary text-black px-2 py-1 font-semibold rounded">
+                Hot
+            </div>
+        </div>
+        <div class="card_body mt-4 pb-4">
+            <h3 class="card_title text-lg font-semibold">Menu2</h3>
+            <p class="card_price text-primary">$120</p>
+            <div class="card_ratings flex items-center">
+              <div class="card_stars flex space-x-1">
+                              <a href="#">
+                <img
+                  src="../assets/images/navbar-icons/cart.png"
+                  alt=""
+                  class="nav_cart cursor-pointer h-7"
+                />
+              </a>
+              </div>
+            </div>
+        </div>
+      </div>
+      <a class="px-5 py-2 inline-block bg-[#f4f4f4] bg-opacity-50 border border-[#000000] text-[#655050] text-block hover:bg-[#f4f4f4] transition-colors my-10 hover:drop-shadow-md duration-300 ease-in-out" href="#">Or See More Menu ➜</a>
+ 
+      
+    </section>
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--End the Product HIGHTLIGHTS Mobile SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+
+
+    <!--*******************************-->
+    <!--RECOMMENDATION SECTION-->
+    <!--*******************************-->
+    <section id="Recommendation" class="bg-[#FCFAFA] min-h-screen">
+      <div class="container flex flex-wrap items-center justify-center mx-auto mt-10 md:px-12 md:flex-row">
+        <div class="mb-14 md:mb-0 lg:w-1/2">
+          <h1 class="max-w-xl font-sans text-[2.9rem] leading-none text-gray-900 font-semibold text-center md:text-4xl md:text-left md:leading-tight mb-5 select-none">
+            Crafted with Passion, Brewed to Perfection.
+          </h1>
+          <p class="max-w-xl text-center text-gray-500 md:text-left md:max-w-md font-sans select-none">
+            Our <strong>Signature Coffee</strong> is more than just a beverage; it's an experience crafted by our passionate baristas who blend expertise with artistry to bring you the finest brews. Each cup tells a story of dedication and skill, ensuring that every sip is a moment to savor. Join us on a journey of flavor and indulge in the essence of excellence with <strong>Signature Coffee</strong>.
+          </p>
+          <div class="flex justify-center mt-10 md:justify-start gap-6">
+            <a href="#" class="text-white bg-[#655050] font-medium  px-5 py-4 text-center hover:bg-white hover:text-[#655050] border-2 border-[#655050] hover:drop-shadow-md transition duration-300 ease-in-out">
+              Order Now ➜
+            </a>
+            <a href="#" class="text-[#655050] bg-transparent font-medium border-2 border-[#655050]  px-5 py-4 text-center  hover:text-[#b0adad] hover:drop-shadow-md transition duration-300 ease-in-out">
+              See Your Cart
+            </a>
+            
+          </div>
+        </div>
+        <div class="lg:w1/2 py-8">
+          <img class ="h-80" src="./assets/images/hero/signatureproduct.svg" alt="Signature"/>
+        </div>
+      </div>
+
+
+    </section>
+
+    <!--*******************************-->
+    <!--END THE RECOMMENDATION SECTION-->
+    <!--*******************************-->
+
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--FOOTER SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->  
     <footer class="bg-[#716464] py-6 md:flex">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center justify-between">
@@ -15,18 +408,22 @@
             <p>&copy; 2024 Your Company. All rights reserved.</p>
           </div>
           <div class="w-full md:w-1/2 text-white text-right">
-            <a href="#" class="inline-block mr-4 w-[22px]"
-              ><img src="img/reel.png" alt="logo"
-            /></a>
-            <a href="#" class="inline-block mr-4 w-[22px]"
-              ><img src="img/ig2.png" alt="logo"
-            /></a>
-            <a href="#" class="inline-block mr-4 w-[22px]"
-              ><img src="img/chat.png" alt="logo"
-            /></a>
+            <a href="#" class="inline-block mr-4 w-[22px]">
+              <img src="./assets/images/footer-icons/reel.png" alt="reel">
+            </a>
+            <a href="#" class="inline-block mr-4 w-[22px]">
+              <img src="./assets/images/footer-icons/ig.png" alt="ig">
+            </a>
+            <a href="#" class="inline-block mr-4 w-[22px]">
+              <img src="./assets/images/footer-icons/chat.png" alt="chat">
+            </a>
           </div>
         </div>
       </div>
     </footer>
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\-->
+    <!--END THE FOOTER SECTION-->
+    <!--\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\--> 
   </body>
-</html>
+  </html>
+  

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="font-sans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Custom Tailwind Configuration
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              'xs': '320px',
+            },
+          },
+        },
+      };
+    </script>
+    <title>Register</title>
+  </head>
+  <body>
+    <section class="h-screen">
+      <div class="h-2/5 bg-[#A8715C] lg:bg-inherit">
+        <!-- SOURCE:https://codepen.io/owaiswiz/pen/jOPvEPB -->
+        <div class="min-h-screen  flex justify-center">
+          <div class="max-w-screen-x m-0 sm:rounded-lg flex items-center justify-center flex-1">
+            <div class="lg:w-5/12 xl:w-7/12 p-6 sm:p-12">
+              <div>
+                <!--  -->
+                <!-- PHONE LOGO -->
+                <img class="lg:hidden w-10 h-10 mx-auto"
+                  src="./assets/images/navbar-icons/logo.png"
+                  class=" w-10 mx-auto"/>
+                <!--  -->
+                <!-- PC LOGO -->
+                <div class="flex justify-center">
+                  <img class="hidden lg:block w-10 h-10 mx-auto"
+                    src="./assets/images/navbar-icons/logo.png"/>
+                </div>
+              </div>
+              <!-- PHONE PICTURE -->
+              <div class="mt-4 flex flex-col items-center">
+                <img class="lg:hidden rounded-3xl w-85 h-65" src="./assets/images/log-in/Register-phone.jpg">
+                <h1 class="pt-4 text-2xl xl:text-3xl font-extrabold">Register</h1>
+
+                <!--  -->
+                <!-- INFORMATION INPUT  -->
+                <!--  -->
+                <div class="w-full flex-1 mt-8">
+                  <div class="mx-auto max-w-xs">
+                    <input
+                     class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                     type="email"
+                      placeholder="Email"/>
+                    <input
+                      class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                      type="password"
+                      placeholder="Full name"/>
+                    <input
+                      class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                     type="password"
+                      placeholder="Password"/>
+                    <input
+                      class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
+                     type="password"
+                      placeholder="Re-enter Password"/>
+                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Upload file</label>
+                    <input class="block w-full py-1 text-sm text-gray-900 cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none  dark:placeholder-gray-400" id="file_input" type="file">
+
+                    <button
+                    class="mt-5 tracking-wide font-semibold bg-[#A8715C] text-gray-100 w-full py-4 rounded-lg hover:bg-[#89583f] transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                    <!--  -->
+                    <svg
+                      class="w-6 h-6 -ml-2"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                      <circle cx="8.5" cy="7" r="4" />
+                      <path d="M20 8v6M23 11h-6" />
+                    </svg>
+                    <span class="ml-3"> Sign up </span>
+                  </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <!-- RIGHT SIDE -->
+          <div
+            class="flex-1 bg-[#A8715C] h-full justify-center items-center hidden lg:flex">
+            <img
+              src="./assets/images/log-in/Register-pc.jpg"
+              class="rounded-full w-145 h-145"
+            />
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+  </body>
+</html>
