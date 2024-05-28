@@ -10,7 +10,7 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 <body>
-    <!-- NAV -->
+    <!-- NAV  K.noey-->
     <section class="bg-transparent">
         <div
           class="font-[Roboto] flex justify-between items-center w-[98%] h-16 mx-auto bg-transparent"
@@ -126,17 +126,17 @@
         }
     </script>
     <!-- CART -->
-    <section class="w-full bg-white px-10 py-10">
-      <div class="border-b pb-8">
-        <h1 class="font-semibold text-2xl ">Shopping Cart</h1>
+    <section class="w-full bg-white md:px-10 md:py-8 p-6">
+      <div class=" pb-8 flex justify-center md:inline-block">
+        <h1 class="font-semibold text-2xl  md:text-2xl ">Shopping Cart</h1>
       </div>
-      <div class="flex mt-10 mb-5">
+      <div class="md:flex md:mt-10 md:mb-5 border-b-4  hidden">
         <h3 class="font-semibold text-gray-600 text-xs uppercase w-2/5">Product Details</h3>
         <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Quantity</h3>
         <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Price</h3>
         <h3 class="font-semibold text-center text-gray-600 text-xs uppercase w-1/5 text-center">Total</h3>
       </div>
-      <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+      <div class="flex items-center md:bg-white bg-[#e5dfd6] hover:bg-gray-100 -mx-8 px-6 py-5">
         <div class="flex w-2/5"> <!-- product -->
           <div class="w-20">
             <img class="h-24" src="assets/images/hero/Coffee.png" alt="">
@@ -160,7 +160,7 @@
         <span class="text-center w-1/5 font-semibold text-sm">$99</span>
       </div>
 
-      <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+      <div class="flex items-center md:bg-white bg-[#e5dfd6] hover:bg-gray-100 -mx-8 px-6 py-5">
         <div class="flex w-2/5"> <!-- product -->
           <div class="w-20">
             <img class="h-24" src="assets/images/hero/Coffee.png" alt="">
@@ -184,7 +184,7 @@
         <span class="text-center w-1/5 font-semibold text-sm">$99</span>
       </div>
 
-      <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+      <div class="flex items-center md:bg-white bg-[#e5dfd6] hover:bg-gray-100 -mx-8 px-6 py-5">
         <div class="flex w-2/5"> <!-- product -->
           <div class="w-20">
             <img class="h-24" src="assets/images/hero/Coffee.png" alt="">
@@ -206,31 +206,36 @@
         <span class="text-center w-1/5 font-semibold text-sm">$99</span>
         <span class="text-center w-1/5 font-semibold text-sm">$99</span>
       </div>
-      <div class="flex justify-between  w-full">
-        <a href="#" class="flex font-semibold text-indigo-600 text-sm mt-10">
-          Continue Shopping
-        </a>
-        <div class="p-8">
-          <div class="flex justify-end items-center mt-8">
+      <div class="md:p-12 flex justify-between  w-full">
+        <div class="hidden md:inline-block w-1/2">
+          <a href="#" class="flex font-semibold text-indigo-600 text-sm mt-10">
+            ⇦Continue Shopping
+          </a>
+        </div>
+        <div class="md:p-1 md:w-1/2 w-full ">
+          <div class="md:flex md:justify-end items-center md:mt-8 mt-2 flex justify-between">
             <span class="font-bold text-gray-600 mr-4">Total Quantity:</span>
             <span class="">3</span>
           </div>
-          <div class="flex justify-end items-center mt-8">
+          <div class="md:flex md:justify-end items-center md:mt-8 mt-2 flex justify-between">
             <span class="font-bold text-gray-600 mr-4">Total Discounts:</span>
             <span class="">$0</span>
           </div>
-          <div class="flex justify-end items-center mt-8">
+          <div class="md:flex md:justify-end items-center md:mt-8 mt-2 flex justify-between">
             <span class="font-bold text-gray-600 mr-4">Order Total:</span>
             <span class="">$0</span>
           </div>
-          <div class="flex justify-end items-center mt-8">
+          <div class="md:flex md:justify-end items-center md:mt-8 mt-2 flex justify-between">
             <span class="font-bold text-gray-600 mr-4">Purchase Date:</span>
             <span class="">xx/xx/xx</span>
+          </div>
+          <div class="md:flex md:justify-end md:pt-2 pt-4 ">
+            <button class="md:px-12 md:py-4 p-4 rounded-md text-white bg-[#897979] md:w-1/2 w-full font-bold text-2xl">CHECKOUT</button>
           </div>
         </div>
       </div>
     </section>
-    <!-- FOOTER -->
+    <!-- FOOTER K.noey-->
     <footer class="bg-[#716464] py-6 md:flex">
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap items-center justify-between">
