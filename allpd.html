@@ -14,22 +14,135 @@
         background-image: url(https://img5.pic.in.th/file/secure-sv1/productb98c8ecaa4907e61.png);
       "
     >
-      <header class="flex flex-col w-full h-full pb-[82px]">
-        <div class="flex pl-[14px] pt-4 cursor-pointer">
-          <img
-            class="w-[16px] h-[16px]"
-            src="imgallproduct/logo.png"
-            alt="logo"
-          />
-          <p class="pl-1 text-[14px]">potioncafe</p>
+      <section class="bg-transparent">
+        <div
+          class="font-[Roboto] flex justify-between items-center w-[92%] h-16 mx-auto bg-transparent"
+        >
+          <div class="flex items-center">
+            <!--LOGO-->
+            <a href="./index.html">
+              <img
+                class="w-6"
+                src="./assets/images/navbar-icons/logo.png"
+                alt="logo"
+            /></a>
+            <p class="font-sans font-bold text-3xl text-black select-none">
+              potioncafe
+            </p>
+          </div>
+
+          <!--HAMBURGER LIST-->
+          <div
+            class="nav-links z-10 duration-500 absolute bg-[#f4f4f4] bg-opacity-80 md:bg-opacity-80 hover:bg-opacity-100 md:m-2 md:left-auto md:right-2 top-[-100%] left-3 right-3 w-fuil flex justify-center md:justify-end items-center p-8 rounded-xl drop-shadow-md"
+          >
+            <ul
+              class="select-none flex flex-col md:justify-evenly items-center md:gap-[2vw] gap-3 text-slate-600 font-light font-sans p-2"
+            >
+              <li>
+                <a class="hover:text-gray-500" href="#">Home</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#">Menu</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#">Login</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#"
+                  >Don't have an account?/Sign up</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex items-center gap-6">
+            <!--SEARCH TAB-->
+            <!-- component -->
+            <div>
+              <div class="flex px-8 group">
+                <div
+                  class="ease-in-out duration-1000 group-hover:w-full group-focus-within:w-full group-focus-within:bg-slate-200 bg-opacity-80 flex items-center justify-between w-0 rounded-full shadow-xl p-1.5 sticky"
+                >
+                  <!-- close icon -->
+                  <button
+                    class="invisible group-hover:visible group-focus-within:visible ease-linear duration-500 opacity-40 group-hover:opacity-100 group-focus-within:opacity-100"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="ionicon w-9 h-9"
+                      viewBox="0 0 512 512"
+                    >
+                      <title>Close Circle</title>
+                      <path
+                        d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- text input -->
+                  <input
+                    class="font-sans opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 invisible group-hover:visible group-focus-within:visible ease-in-out duration-700 rounded-full w-full h-9 py-4 pl-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline lg:text-sm text-xs"
+                    type="text"
+                    placeholder="Search the menu"
+                  />
+
+                  <!-- search icon -->
+                  <button
+                    class="-ml-11 group-hover:ml-auto group-focus-within:ml-auto"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="ionicon h-9 w-9"
+                      viewBox="0 0 512 512"
+                    >
+                      <title>Search Circle</title>
+                      <path
+                        d="M256 64C150.13 64 64 150.13 64 256s86.13 192 192 192 192-86.13 192-192S361.87 64 256 64zm91.31 283.31a16 16 0 01-22.62 0l-42.84-42.83a88.08 88.08 0 1122.63-22.63l42.83 42.84a16 16 0 010 22.62z"
+                      />
+                      <circle cx="232" cy="232" r="56" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!--CART ICON-->
+            <a href="#">
+              <img
+                src="../assets/images/navbar-icons/cart.png"
+                alt=""
+                class="nav_cart cursor-pointer h-7"
+              />
+            </a>
+            <!--HAMBURGER ICON-->
+            <div class="flex items-center gap-6">
+              <ion-icon
+                onclick="onToggleMenu(this)"
+                name="menu"
+                class="text-3xl cursor-pointer"
+              ></ion-icon>
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- For Navigation Bar Hamburgur-->
+      <script>
+        const navLinks = document.querySelector(".nav-links");
+        function onToggleMenu(e) {
+          e.name = e.name === "menu" ? "close" : "menu";
+          navLinks.classList.toggle("top-[11%]");
+        }
+      </script>
+      <!-- ### All product ### -->
+      <header class="flex flex-col w-full h-full pb-[82px]">
         <div class="flex flex-col">
-          <p class="text-center text-[36px] pt-4 text-[#524A4A] font-bold">
+          <p class="text-center text-[34px] pt-4 text-[#524A4A] font-bold">
             Our Awesome Drinks
           </p>
         </div>
         <div class="flex flex-col">
-          <p class="text-center pt-2 pb-10 text-[20px] text-[#887979]">
+          <p class="text-center pb-10 text-[20px] text-[#887979]">
             Indulging in the smooth, velvety texture and<br />
             the symphony of flavors that dance on my palate.
           </p>
@@ -38,7 +151,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -47,33 +160,44 @@
                   </div>
                 </div>
                 <!--right-->
-                <div class="flex-[7] flex flex-col text-[16px] bg-red-200">
-                  <div class="flex justify-between text-[22px] bg-green-200">
+                <div class="flex-[7] flex flex-col text-[16px]">
+                  <div class="flex justify-between text-[22px]">
                     <h3>Ice Flat White</h3>
                     <div>
                       <img
-                        src="imgallproduct/fav.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
-                  <div class="flex-1 text-[14px] text-[#979797] bg-yellow-200">
-                    <span class="bg-red-200"
-                      >Ristretto shot finished with milk and iced.</span
-                    >
-                    <button class="rounded-md bg">df</button>
+                  <div class="flex-1 text-[14px] text-[#979797]">
+                    <span>Ristretto shot finished with milk and iced.</span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      160.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3
-                        class="text-[22px] font-bold text-[#DD9776] bg-orange-200"
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
                       >
-                        160.-
-                      </h3>
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3 bg-blue-200">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -92,7 +216,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -106,29 +230,47 @@
                     <h3>Iced Classic Chocolate</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Chocolate sauce with milk and ice topped with whipped cream
-                    and chocolate sauce.
+                    <span
+                      >Chocolate sauce with milk and ice topped with whipped
+                      cream and chocolate sauce.
+                    </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      135.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        135.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -142,7 +284,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -156,29 +298,47 @@
                     <h3>Malty Chocolate Latte</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Espresso with Malt Cocoa beverage powder, Nut Malt powder
-                    and milk. Topped with whipped cream
+                    <span
+                      >Espresso with Malt Cocoa beverage powder, Nut Malt powder
+                      and milk. Topped with whipped cream
+                    </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      165.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        165.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -192,7 +352,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -206,29 +366,47 @@
                     <h3>Mocha Frappuccino</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Coffee with rich mocha sauce blended with milk and ice.
-                    Topped with whipped cream.
+                    <span
+                      >Coffee with rich mocha sauce blended with milk and ice.
+                      Topped with whipped cream.</span
+                    >
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      160.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        160.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -242,7 +420,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -256,28 +434,44 @@
                     <h3>Americano</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Rich espresso and pure water poured over ice.
+                    <span>Rich espresso and pure water poured over ice. </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      135.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        135.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -291,7 +485,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -305,29 +499,47 @@
                     <h3>Dark Chocolate Mocha</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    This Dark Chocolate Mocha is smooth, creamy, and easy to
-                    make on the stovetop.
+                    <span
+                      >This Dark Chocolate Mocha is smooth, creamy, and easy to
+                      make on the stovetop.
+                    </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      145.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        145.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -341,7 +553,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -355,28 +567,46 @@
                     <h3>Cafe Mocha</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Espresso shot, mocha sauce, milk and whipped cream.
+                    <span
+                      >Espresso shot, mocha sauce, milk and whipped cream.
+                    </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      160.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        160.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -390,7 +620,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -404,28 +634,44 @@
                     <h3>Brewed Coffee</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Coffee and hot water with simply drip-brewed.
+                    <span>Coffee and hot water with simply drip-brewed. </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      130.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        130.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -439,7 +685,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -453,28 +699,44 @@
                     <h3>Expresso Con panna</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    a dollop of whipped cream
+                    <span>a dollop of whipped cream </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      115.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        115.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -488,7 +750,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -502,28 +764,46 @@
                     <h3>Caramel Macchiato</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Milk, vanilla syrup espresso shot and caramel drizzles.
+                    <span
+                      >Milk, vanilla syrup espresso shot and caramel drizzles.
+                    </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      170.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        170.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -537,7 +817,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -551,26 +831,44 @@
                     <h3>Soft Oatmeal Raisin Cookie</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    A Chewy cookie with rolled oats and Raisins.
+                    <span>A Chewy cookie with rolled oats and Raisins. </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      65.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">65.-</h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -584,7 +882,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -598,26 +896,44 @@
                     <h3>Custard Cream, Mochi Waffle</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Custard Cream, Mochi Waffle
+                    <span>Custard Cream, Mochi Waffle </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      65.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">65.-</h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -631,7 +947,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -642,32 +958,50 @@
                 <!--right-->
                 <div class="flex-[7] flex flex-col text-[16px]">
                   <div class="flex justify-between text-[22px]">
-                    <h3>Ice Flat White</h3>
+                    <h3>Strawberry Tart</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Finest almond-rich frangipane cream encased in all butter
-                    shortcrust pastry
+                    <span
+                      >Finest almond-rich frangipane cream generously with hand
+                      placed strawberries.
+                    </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      180.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        180.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -681,7 +1015,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -695,29 +1029,47 @@
                     <h3>Myrtillus Cheese cake</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Creamy cheesecake swirled with tangy blueberry compote atop
-                    a buttery graham cracker crust.
+                    <span
+                      >Creamy cheesecake swirled with tangy blueberry compote
+                      atop a buttery graham cracker crust.
+                    </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      145.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">
-                        145.-
-                      </h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -731,7 +1083,7 @@
           <div>
             <div class="w-[calc((100vw_-_60px)_/_3)]">
               <div
-                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px]"
+                class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
                 <!--left-->
                 <div class="flex-[3]">
@@ -745,27 +1097,47 @@
                     <h3>Prunus dulcis Croissant</h3>
                     <div>
                       <img
-                        src="imgallproduct/🦆 icon _trash_.svg"
+                        src="imgallproduct/Buy.svg"
                         class="w-6 h-6 cursor-pointer"
                       />
                     </div>
                   </div>
                   <div class="flex-1 text-[14px] text-[#979797]">
-                    Flaky croissant filled with sweet almond paste, topped with
-                    sliced almonds.
+                    <span
+                      >Flaky croissant filled with sweet almond paste, topped
+                      with sliced almonds.
+                    </span>
+                    <h3 class="text-[22px] pt-3 font-bold text-[#DD9776]">
+                      90.-
+                    </h3>
                   </div>
                   <!--price-->
 
                   <div class="flex justify-between items-center gap-1">
-                    <div>
-                      <h3 class="text-[22px] font-bold text-[#DD9776]">90.-</h3>
+                    <div class="flex gap-2 text-[12px] font-bold">
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Add-ons
+                      </button>
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Hot
+                      </button>
+
+                      <button
+                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
+                      >
+                        Cold
+                      </button>
                     </div>
-                    <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
                         class="w-6 h-6 cursor-grab"
                       />
-                      <h3 class="text-[18px]">1</h3>
+                      <h3 class="text-[18px]">0</h3>
                       <img
                         src="imgallproduct/Icon Plus.svg"
                         class="w-6 h-6 cursor-grab"
@@ -780,8 +1152,8 @@
       </header>
     </div>
     <!--V.mobile-->
-    <div class="bg-pink-200 font-bold text-center">
+    <!-- <div class="bg-pink-200 font-bold text-center">
       <p>test</p>
-    </div>
+    </div> -->
   </body>
 </html>
