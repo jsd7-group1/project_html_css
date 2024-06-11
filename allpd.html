@@ -6,131 +6,143 @@
     <title>All product</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- For Navigation Bar Hamburgur-->
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
   <body>
     <div
-      class="bg-no-repeat bg-cover bg-left bg-fixed hidden sm:block"
+      class="bg-no-repeat bg-cover bg-left bg-fixed"
       style="
         background-image: url(https://img5.pic.in.th/file/secure-sv1/productb98c8ecaa4907e61.png);
       "
     >
-    <!--navbar k.noey-->
-    <section class="bg-transparent">
-      <div
-        class="font-[Roboto] flex justify-between items-center w-[92%] h-16 mx-auto bg-transparent"
-      >
-        <div class="flex items-center">
-          <!--LOGO-->
-          <a href="./index.html">
-            <img
-              class="w-6"
-              src="./assets/images/navbar-icons/logo.png"
-              alt="logo"
-          /></a>
-          <p class="font-sans font-bold text-3xl text-black select-none">potioncafe</p>
-        </div>
+      <!--////////////////////////////////-->
+      <!--NAVIGATION BAR-->
+      <!--////////////////////////////////-->
 
-        <!--HAMBURGER LIST-->
+      <section class="bg-transparent">
         <div
-          class="nav-links z-10 duration-500 absolute bg-[#f4f4f4] bg-opacity-80 md:bg-opacity-80 hover:bg-opacity-100  md:m-2 md:left-auto md:right-2 top-[-100%] left-3 right-3 w-fuil flex justify-center md:justify-end items-center p-8 rounded-xl drop-shadow-md"
+          class="font-[Roboto] flex justify-between items-center w-[92%] h-16 mx-auto bg-transparent"
         >
-          <ul class="select-none flex flex-col md:justify-evenly items-center md:gap-[2vw] gap-3 text-slate-600 font-light font-sans p-2">
-            <li>
-              <a class="hover:text-gray-500 " href="#">Home</a>
-            </li>
-            <li>
-              <a class="hover:text-gray-500" href="#">Menu</a>
-            </li>
-            <li>
-              <a class="hover:text-gray-500" href="#">Login</a>
-            </li>
-            <li>
-              <a class="hover:text-gray-500" href="#"
-                >Don't have an account?/Sign up</a
-              >
-            </li>
-          </ul>
-        </div>
+          <div class="flex items-center">
+            <!--LOGO-->
+            <a href="./index.html">
+              <img
+                class="w-6"
+                src="./assets/images/navbar-icons/logo.png"
+                alt="logo"
+            /></a>
+            <p class="font-sans font-bold text-3xl text-black select-none">
+              potioncafe
+            </p>
+          </div>
 
-        <div class="flex items-center gap-6">
-          <!--SEARCH TAB-->
-          <!-- component -->
-          <div>
-            <div class="flex px-8 group">
-              <div
-                class="ease-in-out duration-1000 group-hover:w-full group-focus-within:w-full group-focus-within:bg-slate-200 bg-opacity-80 flex items-center justify-between w-0 rounded-full shadow-xl p-1.5 sticky"
-              >
-                <!-- close icon -->
-                <button
-                  class="invisible group-hover:visible group-focus-within:visible ease-linear duration-500 opacity-40 group-hover:opacity-100 group-focus-within:opacity-100"
+          <!--HAMBURGER LIST-->
+          <div
+            class="nav-links z-10 duration-500 absolute bg-[#f4f4f4] bg-opacity-80 md:bg-opacity-80 hover:bg-opacity-100 md:m-2 md:left-auto md:right-2 top-[-100%] left-3 right-3 w-fuil flex justify-center md:justify-end items-center p-8 rounded-xl drop-shadow-md"
+          >
+            <ul
+              class="select-none flex flex-col md:justify-evenly items-center md:gap-[2vw] gap-3 text-slate-600 font-light font-sans p-2"
+            >
+              <li>
+                <a class="hover:text-gray-500" href="#">Home</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#">Menu</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#">Login</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#"
+                  >Don't have an account?/Sign up</a
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="ionicon w-9 h-9"
-                    viewBox="0 0 512 512"
-                  >
-                    <title>Close Circle</title>
-                    <path
-                      d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z"
-                    />
-                  </svg>
-                </button>
+              </li>
+            </ul>
+          </div>
 
-                <!-- text input -->
-                <input
-                  class="font-sans opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 invisible group-hover:visible group-focus-within:visible ease-in-out duration-700 rounded-full w-full h-9 py-4 pl-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline lg:text-sm text-xs"
-                  type="text"
-                  placeholder="Search the menu"
-                />
-
-                <!-- search icon -->
-                <button
-                  class="-ml-11 group-hover:ml-auto group-focus-within:ml-auto"
+          <div class="flex items-center gap-6">
+            <!--SEARCH TAB-->
+            <!-- component -->
+            <div>
+              <div class="flex px-8 group">
+                <div
+                  class="ease-in-out duration-1000 group-hover:w-full group-focus-within:w-full group-focus-within:bg-slate-200 bg-opacity-80 flex items-center justify-between w-0 rounded-full shadow-xl p-1.5 sticky"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="ionicon h-9 w-9"
-                    viewBox="0 0 512 512"
+                  <!-- close icon -->
+                  <button
+                    class="invisible group-hover:visible group-focus-within:visible ease-linear duration-500 opacity-40 group-hover:opacity-100 group-focus-within:opacity-100"
                   >
-                    <title>Search Circle</title>
-                    <path
-                      d="M256 64C150.13 64 64 150.13 64 256s86.13 192 192 192 192-86.13 192-192S361.87 64 256 64zm91.31 283.31a16 16 0 01-22.62 0l-42.84-42.83a88.08 88.08 0 1122.63-22.63l42.83 42.84a16 16 0 010 22.62z"
-                    />
-                    <circle cx="232" cy="232" r="56" />
-                  </svg>
-                </button>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="ionicon w-9 h-9"
+                      viewBox="0 0 512 512"
+                    >
+                      <title>Close Circle</title>
+                      <path
+                        d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm75.31 260.69a16 16 0 11-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 01-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0122.62-22.62L256 233.37l52.69-52.68a16 16 0 0122.62 22.62L278.63 256z"
+                      />
+                    </svg>
+                  </button>
+
+                  <!-- text input -->
+                  <input
+                    class="font-sans opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 invisible group-hover:visible group-focus-within:visible ease-in-out duration-700 rounded-full w-full h-9 py-4 pl-4 text-gray-700 bg-gray-100 leading-tight focus:outline-none focus:shadow-outline lg:text-sm text-xs"
+                    type="text"
+                    placeholder="Search the menu"
+                  />
+
+                  <!-- search icon -->
+                  <button
+                    class="-ml-11 group-hover:ml-auto group-focus-within:ml-auto"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="ionicon h-9 w-9"
+                      viewBox="0 0 512 512"
+                    >
+                      <title>Search Circle</title>
+                      <path
+                        d="M256 64C150.13 64 64 150.13 64 256s86.13 192 192 192 192-86.13 192-192S361.87 64 256 64zm91.31 283.31a16 16 0 01-22.62 0l-42.84-42.83a88.08 88.08 0 1122.63-22.63l42.83 42.84a16 16 0 010 22.62z"
+                      />
+                      <circle cx="232" cy="232" r="56" />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!--CART ICON-->
-          <a href="#">
-            <img
-              src="../assets/images/navbar-icons/cart.png"
-              alt=""
-              class="nav_cart cursor-pointer h-7"
-            />
-          </a>
-          <!--HAMBURGER ICON-->
-          <div class="flex items-center gap-6">
-            <ion-icon
-              onclick="onToggleMenu(this)"
-              name="menu"
-              class="text-3xl cursor-pointer"
-            ></ion-icon>
+            <!--CART ICON-->
+            <a href="#">
+              <img
+                src="../assets/images/navbar-icons/cart.png"
+                alt=""
+                class="nav_cart cursor-pointer h-7"
+              />
+            </a>
+            <!--HAMBURGER ICON-->
+            <div class="flex items-center gap-6">
+              <ion-icon
+                onclick="onToggleMenu(this)"
+                name="menu"
+                class="text-3xl cursor-pointer"
+              ></ion-icon>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- For Navigation Bar Hamburgur-->
-    <script>
-      const navLinks = document.querySelector(".nav-links");
-      function onToggleMenu(e) {
-        e.name = e.name === "menu" ? "close" : "menu";
-        navLinks.classList.toggle("top-[11%]");
-      }
-    </script>
+      <!-- For Navigation Bar Hamburgur-->
+      <script>
+        const navLinks = document.querySelector(".nav-links");
+        function onToggleMenu(e) {
+          e.name = e.name === "menu" ? "close" : "menu";
+          navLinks.classList.toggle("top-[11%]");
+        }
+      </script>
+      <!--////////////////////////////////-->
+      <!--END THE NAVIGATION BAR-->
+      <!--////////////////////////////////-->
 
       <!-- ### All product ### -->
       <header class="flex flex-col w-full h-full pb-[82px]">
@@ -145,9 +157,11 @@
             the symphony of flavors that dance on my palate.
           </p>
         </div>
-        <section class="flex gap-[10px] px-[10px] flex-wrap">
+        <section
+          class="md:flex-row flex flex-col gap-[10px] px-[10px] flex-wrap"
+        >
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -212,7 +226,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -280,7 +294,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -348,7 +362,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -416,7 +430,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -481,7 +495,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -549,7 +563,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -616,7 +630,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -681,7 +695,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -746,7 +760,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -813,7 +827,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -842,25 +856,9 @@
                   </div>
                   <!--price-->
 
-                  <div class="flex justify-between items-center gap-1">
-                    <div class="flex gap-2 text-[12px] font-bold">
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Add-ons
-                      </button>
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Hot
-                      </button>
-
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Cold
-                      </button>
-                    </div>
+                  <div
+                    class="flex justify-between items-center gap-1 text-[12px] font-bold"
+                  >
                     <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
@@ -878,7 +876,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -907,25 +905,9 @@
                   </div>
                   <!--price-->
 
-                  <div class="flex justify-between items-center gap-1">
-                    <div class="flex gap-2 text-[12px] font-bold">
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Add-ons
-                      </button>
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Hot
-                      </button>
-
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Cold
-                      </button>
-                    </div>
+                  <div
+                    class="flex justify-between items-center gap-1 text-[12px] font-bold"
+                  >
                     <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
@@ -943,7 +925,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -975,25 +957,9 @@
                   </div>
                   <!--price-->
 
-                  <div class="flex justify-between items-center gap-1">
-                    <div class="flex gap-2 text-[12px] font-bold">
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Add-ons
-                      </button>
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Hot
-                      </button>
-
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Cold
-                      </button>
-                    </div>
+                  <div
+                    class="flex justify-between items-center gap-1 text-[12px] font-bold"
+                  >
                     <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
@@ -1011,7 +977,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -1043,25 +1009,9 @@
                   </div>
                   <!--price-->
 
-                  <div class="flex justify-between items-center gap-1">
-                    <div class="flex gap-2 text-[12px] font-bold">
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Add-ons
-                      </button>
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Hot
-                      </button>
-
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Cold
-                      </button>
-                    </div>
+                  <div
+                    class="flex justify-between items-center gap-2 text-[12px] font-bold"
+                  >
                     <div class="flex items-center gap-2">
                       <img
                         src="imgallproduct/Icon Minus.svg"
@@ -1079,7 +1029,7 @@
             </div>
           </div>
           <div>
-            <div class="w-[calc((100vw_-_60px)_/_3)]">
+            <div class="md:w-[calc((100vw_-_60px)_/_3)] w-full">
               <div
                 class="flex bg-white hover:bg-[#efedea] p-3 gap-2 rounded-[18px] cursor-pointer"
               >
@@ -1110,37 +1060,16 @@
                     </h3>
                   </div>
                   <!--price-->
-
-                  <div class="flex justify-between items-center gap-1">
-                    <div class="flex gap-2 text-[12px] font-bold">
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Add-ons
-                      </button>
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Hot
-                      </button>
-
-                      <button
-                        class="rounded-[12px] bg-gray-100 w-[62px] h-[28px] text-[#00623B] hover:bg-[#DAC6B6]"
-                      >
-                        Cold
-                      </button>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <img
-                        src="imgallproduct/Icon Minus.svg"
-                        class="w-6 h-6 cursor-grab"
-                      />
-                      <h3 class="text-[18px]">0</h3>
-                      <img
-                        src="imgallproduct/Icon Plus.svg"
-                        class="w-6 h-6 cursor-grab"
-                      />
-                    </div>
+                  <div class="flex items-center gap-2">
+                    <img
+                      src="imgallproduct/Icon Minus.svg"
+                      class="w-6 h-6 cursor-grab"
+                    />
+                    <h3 class="text-[18px]">0</h3>
+                    <img
+                      src="imgallproduct/Icon Plus.svg"
+                      class="w-6 h-6 cursor-grab"
+                    />
                   </div>
                 </div>
               </div>
@@ -1149,7 +1078,9 @@
         </section>
       </header>
     </div>
+    <!--////////////////////////////////-->
     <!-- FOOTER K.noey-->
+    <!--////////////////////////////////-->
     <footer class="bg-[#716464] py-6 md:flex">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center justify-between">
